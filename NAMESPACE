@@ -1,0 +1,5 @@
+importFrom(magrittr, '%>%')
+
+export(get_game_results)
+export(get_team_results)
+export(get_skater_stats)

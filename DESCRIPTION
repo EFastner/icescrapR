@@ -1,0 +1,15 @@
+Package: icescrapr
+Type: Package
+Title: A package for scraping and summarizing PbP Data from NHL.com
+Version: 0.0.0.9000
+Author@R: person("Eric", "Fastner", email = "eric.fastner@gmail.com", role = c("cre", "aut"))
+Maintainer: The package maintainer <yourself@somewhere.net>
+Description: A collection of functions that will help the user srape
+    play-by-play data from NHL.com as well as a collection of functions
+    for summarizing, analyzing, and visualizing the results
+License: 
+Encoding: UTF-8
+LazyData: true
+Imports:
+  dplyr,
+  magrittr

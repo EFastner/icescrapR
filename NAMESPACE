@@ -3,6 +3,8 @@ importFrom(magrittr, '%>%')
 #PBP Summary Functions
 export(get_game_results)
 export(get_team_results)
+
+#PBP Stats Functions
 export(get_skater_stats)
 export(get_team_stats)
 

@@ -190,3 +190,21 @@ point_total <- function(data_set, gdate, team) {
   return(point_count)
 }
 
+get_team_stats <- function(rawdata) {
+  #DESCRIPTION - Modify raw_data to get team summary data frame
+
+  #Create Data for Team Summary Graph
+  team_graphsummary <-
+    rawdata %>%
+    dplyr::filter(!is.na(event_team)) %>%
+    dplyr::group_by(event_team) %>%
+    dplyr::summarise(Goals = sum(event_type == "GOAL"),
+              Hits = sum(event_type == "HIT"),
+              Blocks = sum(event_type == "BLOCK"),
+              Corsi = sum(event_type %in% names(corsi_events)),
+              Shots = sum(event_type %in% c("SHOT","GOAL")),
+              Faceoffs = sum(event_type == "FAC")) %>%
+    tidyr::gather(Event, Value, -event_team)
+
+}
+

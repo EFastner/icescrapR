@@ -1,5 +1,12 @@
 importFrom(magrittr, '%>%')
 
+#PBP Summary Functions
 export(get_game_results)
 export(get_team_results)
 export(get_skater_stats)
+export(get_team_stats)
+
+#Viz Functions
+export(viz_corsi_graph)
+export(viz_corsi_positions)
+export(viz_team_summary)

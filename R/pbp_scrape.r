@@ -1,7 +1,20 @@
+#'Enhance NHL RTSS Data
+#'
+#'Create additional values for each line of NHL RTSS Data
+#'
+#'Included Items \cr
+#'\itemize{
+#'   \item is_home = 1 if the home team was the primary focus of the event
+#'   \item game_mins = Converts game seconds to minutes
+#'   \item side_coordsx and side_coordsy = Moves all event coordinates to one side on the ice based on is_home
+#'   \item is_corsi = i if the event is a corsi event (Shot, Goal, Miss, or Block)
+#'}
+#'
+#'@param rawdata NHL RTSS data
+#'
+#'@author Eric Fastner (eric.fastner@@gmail.com)
+#'@export
 enhanced_PBP <- function(rawdata) {
-  #DESCRIPTION - Add various additional columns to scraped PBP data
-  #ARGUMENTS - rawdata = a PBP data frame scraped with Manny Perry's dryscrape functions
-  #DEPENDENCIES - None
 
   #Add Dummy Column for Home Team
   rawdata$is_home <-

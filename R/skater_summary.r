@@ -1,5 +1,42 @@
+#'Summarize skater stats by Game ID
+#'
+#'Create a data frame of all skaters contained in an NHL RTSS data frame. Choose to split home and away separately
+#'or combine into one dataframe. Explanation of calculated stats included in details
+#'
+#'\itemize{
+#'   \item TOI = Time on Ice
+#'   \item G = Goals
+#'   \item A1 = First Assists
+#'   \item A2 = Second Assits
+#'   \item A = Total Assists
+#'   \item P = Total Points
+#'   \item P1 = Goals and First Assists
+#'   \item FOW = Faceoff Wins
+#'   \item FOT = Faceoffs Taken
+#'   \item FOL = Faceoffs Lost
+#'   \item SOG = Shots on Goal
+#'   \item iCF = Individual Corsi For
+#'   \item HITS = Hits
+#'   \item BLK = Blocks
+#'   \item PEND = Penalties Drawn
+#'   \item PENT = Penalties Taken
+#'   \item CF = Team Corsi For
+#'   \item CA = Team Corsi Against
+#'   \item CF_5v5 = Team Corsi For at 5 on 5
+#'   \item CA_5v5 = Team Corsi Against at 5 on 5
+#'   \item GF_5v5 = Team Goals For at 5 on 5
+#'   \item GA_5v5 = Team Goals Against at 5 on 5
+#'   \item FO_per = Faceoff Percentage
+#'   \item GS = \href{https://hockey-graphs.com/2016/07/13/measuring-single-game-productivity-an-introduction-to-game-score/}{Gamescore}
+#'}
+#'
+#'@param dataset A Raw NHL RTSS Data Frame
+#'@param combined when combined = FALSE, the default, get_skater_stats will output a list of 2 data frames
+#'with the home skaters in [1] and away in [2]. To combine into one data set, use combined = TRUE
+#'
+#'@author Eric Fastner (eric.fastner@@gmail.com)
+#'@export
 get_skater_stats <- function(dataset, combined = FALSE) {
-  #DESCRIPTION - Utilize fun.skater_stats function to create stats summary for all player in PBP frame
 
   if (!("is_home" %in% colnames(dataset))) {
     dataset <- enhanced_PBP(dataset)

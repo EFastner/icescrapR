@@ -1,3 +1,9 @@
+#'Visual Representation of Hockey Rink
+#'
+#'Create a visual representation of a hockey rink for use with ggplot2
+#'
+#'@author Prashanth Iyer (Twitter: \href{https://twitter.com/iyer_prashanth}{@@iyer_prashanth})
+#'@export
 viz_draw_rink <- function() {
 
   ################################################################################
@@ -202,8 +208,17 @@ viz_draw_rink <- function() {
   return(rink)
 }
 
+#'Chart Corsi Events for Each Team
+#'
+#'Create a chart of all corsi events for each team plotted by minute of
+#'the game using NHL RTSS data. Only uses one game at a time.
+#'
+#'@param rawdata NHL RTSS data for a single game
+#'@param color_list utilizes the hex colors stored in team_colors$primary unless otherwise specified
+#'
+#'@author Eric Fastner (eric.fastner@@gmail.com)
+#'@export
 viz_corsi_graph <- function(rawdata, color_list = team_colors) {
-  #DESCRIPTION - use fun.corsi_table to create a vizualization of corsi during a specified game
 
   #Check if the rawdata only contains one game
   if(length(unique(rawdata$game_id)) != 1){
@@ -249,6 +264,15 @@ viz_corsi_graph <- function(rawdata, color_list = team_colors) {
   return(viz.corsi_graph)
 }
 
+#'Chart Corsi Events and Their Positions
+#'
+#'Create a visual representation of all corsi events for a given game and their position on the ice
+#'
+#'@param rawdata NHL RTSS data for a single game
+#'@param color_list utilizes the hex colors stored in team_colors$primary unless otherwise specified
+#'
+#'@author Eric Fastner (eric.fastner@@gmail.com)
+#'@export
 viz_corsi_positions <- function(rawdata, color_list = team_colors) {
 
   #Check if the rawdata only contains one game
@@ -287,6 +311,21 @@ viz_corsi_positions <- function(rawdata, color_list = team_colors) {
 
 }
 
+#'Graphically Summarize Team Stats
+#'
+#'Create a graphical representation of specific team stats for a given game
+#'
+#'\itemize{
+#'   \item Blocks = Total blocks by each team
+#'   \item Hits = Total hits by each team
+#'   \item Faceoffs = Total faceoffs won by each team
+#'   \item Corsi = Total corsi events by each team
+#'   \item Shots = Total shots by each team
+#'   \item Goals = Total goals by each team
+#'}
+#'
+#'@author Eric Fastner (eric.fastner@@gmail.com)
+#'@export
 viz_team_summary <- function(rawdata, color_list = team_colors) {
   #DESCRIPTION - Use fun.team_summary to create a vizualization of team game performance
 

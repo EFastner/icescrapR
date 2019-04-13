@@ -9,6 +9,10 @@ A package of functions and data sets to process the RTSS (play-by-play) data fro
 
 ### Available Functions
 
+##### *RTSS Modifications*
+
+enhanced\_PBP(): Adds additional data to an NHL RTSS data frame
+
 ##### *Game Results*
 
 get\_game\_results(): Creates a summary of all game results contained in an RTSS data frame
@@ -18,6 +22,8 @@ get\_team\_results(): Creates a summary of all game results contained in an RTSS
 ##### *Game Stats*
 
 get\_skater\_stats(): Calculates various stats for all skaters contained in an RTSS data frame, grouped by game
+
+get\_goalie\_stats(): Calculates various stats for all goalies contained in an RTSS data frame, grouped by game
 
 get\_team\_stats(): Calculates various stats for all teams contained in an RTSS data frame, grouped by game
 
@@ -49,4 +55,6 @@ team\_colors: A data frame containing Primary, Secondar, Tiertiary, and Quartern
 
 corsi\_events: A list of corsi events and their corresponding ggplot shape numbers
 
-game\_score\_weights: A list of the components used to calculate [gamescore](https://hockey-graphs.com/2016/07/13/measuring-single-game-productivity-an-introduction-to-game-score/) and their corresponding weights
+gs\_weights\_skaters: A list of the components used to calculate [gamescore](https://hockey-graphs.com/2016/07/13/measuring-single-game-productivity-an-introduction-to-game-score/) and their corresponding weights
+
+gs\_weights\_goalies: A list of the components used to calculate [gamescore](https://hockey-graphs.com/2016/07/13/measuring-single-game-productivity-an-introduction-to-game-score/) and their corresponding weights

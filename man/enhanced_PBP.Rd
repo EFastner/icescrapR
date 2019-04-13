@@ -19,6 +19,8 @@ Included Items \cr
   \item game_mins = Converts game seconds to minutes
   \item side_coordsx and side_coordsy = Moves all event coordinates to one side on the ice based on is_home
   \item is_corsi = i if the event is a corsi event (Shot, Goal, Miss, or Block)
+  \item event_angle = the angle (in degrees) of a given event to the goal
+  \item event_distance = the distance (in feet) of a given event to the goal
 }
 }
 \author{

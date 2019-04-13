@@ -25,9 +25,10 @@ NULL
 #'alignment_present \cr
 #'corsi_events \cr
 #'gs_weights_skaters \cr
+#'gs_weights_goalies \cr
 #'rink \cr
 #'team_colors \cr
 #'
 #'@docType package
 #'@name icescrapr
-NULL
+"_PACKAGE"

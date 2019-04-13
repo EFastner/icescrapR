@@ -2,6 +2,7 @@
 
 export(enhanced_PBP)
 export(get_game_results)
+export(get_goalie_stats)
 export(get_skater_stats)
 export(get_team_results)
 export(viz_corsi_graph)

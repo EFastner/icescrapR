@@ -6,7 +6,9 @@
 \alias{icescrapr-package}
 \title{icescrapR: A package for helping to scrape, summarize, and visualize the NHL RTSS (play-by-play) data}
 \description{
-icescrapR: A package for helping to scrape, summarize, and visualize the NHL RTSS (play-by-play) data
+A collection of functions that will help the user srape
+    play-by-play data from NHL.com as well as a collection of functions
+    for summarizing, analyzing, and visualizing the results
 }
 \section{Scrape Functions}{
 
@@ -38,7 +40,8 @@ alignment_20002011 \cr
 alignment_20112013 \cr
 alignment_present \cr
 corsi_events \cr
-game_score_weights \cr
+gs_weights_skaters \cr
+gs_weights_goalies \cr
 rink \cr
 team_colors \cr
 }

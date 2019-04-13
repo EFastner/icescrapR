@@ -24,7 +24,7 @@ NULL
 #'alignment_20112013 \cr
 #'alignment_present \cr
 #'corsi_events \cr
-#'game_score_weights \cr
+#'gs_weights_skaters \cr
 #'rink \cr
 #'team_colors \cr
 #'

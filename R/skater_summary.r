@@ -73,7 +73,7 @@ get_skater_stats <- function(dataset, combined = FALSE) {
       summary.home_skaters[i,] %>%
       dplyr::select(player, team, season, game_id, G, A1, A2, SOG, BLK, PENT, PEND, FOW, FOL, CF_5v5, CA_5v5, GF_5v5, GA_5v5)
 
-    summary.home_skaters[i, "GS"] <- round(fun.gamescore(gs_cats[,5:17]),3)
+    summary.home_skaters[i, "GS"] <- round(gamescore_skaters(gs_cats[,5:17]),3)
   }
 
   summary.away_skaters <- dplyr::bind_rows(away_player_summary1,
@@ -91,7 +91,7 @@ get_skater_stats <- function(dataset, combined = FALSE) {
       summary.away_skaters[i,] %>%
       dplyr::select(player, team, season, game_id, G, A1, A2, SOG, BLK, PENT, PEND, FOW, FOL, CF_5v5, CA_5v5, GF_5v5, GA_5v5)
 
-    summary.away_skaters[i, "GS"] <- round(fun.gamescore(gs_cats[,5:17]),3)
+    summary.away_skaters[i, "GS"] <- round(gamescore_skaters(gs_cats[,5:17]),3)
   }
 
   if(combined == FALSE){
@@ -168,10 +168,10 @@ calc_skater_stats <- function(dataset, team_indicator) {
   return(output)
 }
 
-fun.gamescore <- function(stats) {
+gamescore_skaters <- function(stats) {
   #DESCRIPTION - Outputs the gamescore of a given stat line
   #ARGUMENTS - stats = a list of values corresponding to each item in order: G, A1, A2, iSF, iBLK, iPent, iPend, iFOW, iFOL, CF, CA, GF, GA
 
-  return(sum(stats * game_score_weights))
+  return(sum(stats * gs_weights_skaters))
 }
 

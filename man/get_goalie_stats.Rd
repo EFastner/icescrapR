@@ -14,6 +14,7 @@ Create a data frame of all goalies contained in an NHL RTSS data frame
    \item TOI = Time on Ice
    \item SA = Shots Against
    \item GA = Goals Against
+   \item SV = Saves
    \item SV_Perc = Save Percentage
    \item GS = \href{https://hockey-graphs.com/2016/07/13/measuring-single-game-productivity-an-introduction-to-game-score/}{Gamescore}
 }

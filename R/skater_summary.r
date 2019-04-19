@@ -39,7 +39,7 @@
 get_skater_stats <- function(dataset, combined = FALSE) {
 
   if (!("is_home" %in% colnames(dataset))) {
-    dataset <- enhanced_PBP(dataset)
+    dataset <- enhanced_pbp(dataset)
   }
 
   #Run Skater_Stats function for all 6 skater slots on PBP file

@@ -230,8 +230,8 @@ viz_corsi_graph <- function(rawdata, color_list = team_colors) {
   df.primary_colors <- as.character(color_list$Primary)
   names(df.primary_colors) <- row.names(color_list)
 
-  #Utilize enhanced_PBP to add more columns
-  df.enhanced_pbp <- enhanced_PBP(rawdata)
+  #Utilize enhanced_pbp to add more columns
+  df.enhanced_pbp <- enhanced_pbp(rawdata)
 
   #Filter only corsi events
   df.corsi_table <-
@@ -285,8 +285,8 @@ viz_corsi_positions <- function(rawdata, color_list = team_colors) {
   df.primary_colors <- as.character(color_list$Primary)
   names(df.primary_colors) <- row.names(color_list)
 
-  #Utilize enhanced_PBP to add more columns
-  df.enhanced_pbp <- enhanced_PBP(rawdata)
+  #Utilize enhanced_pbp to add more columns
+  df.enhanced_pbp <- enhanced_pbp(rawdata)
 
   #Filter only corsi events
   df.corsi_table <-

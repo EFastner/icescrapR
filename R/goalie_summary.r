@@ -16,7 +16,7 @@
 #'@export
 get_goalie_stats <- function(dataset){
   if (!("is_home" %in% colnames(dataset))) {
-    dataset <- enhanced_PBP(dataset)
+    dataset <- enhanced_pbp(dataset)
   }
 
   home_goalies <-

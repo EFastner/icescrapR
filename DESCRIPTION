@@ -6,15 +6,23 @@ Author@R: person("Eric", "Fastner", email = "eric.fastner@gmail.com", role = c("
 Maintainer: Eric Fastner <eric.fastner@gmail.com>
 Description: A collection of functions that will help the user srape
     play-by-play data from NHL.com as well as a collection of functions
-    for summarizing, analyzing, and visualizing the results
+    for summarizing, analyzing, and visualizing the results. Special thanks to
+    Evolving Hockey (https://evolving-hockey.com/) for the scraping functions
 License: 
 Encoding: UTF-8
 LazyData: true
 Imports:
   dplyr,
+  foreach,
   ggplot2,
+  jsonlite,
+  lubridate,
   magrittr,
-  tidyr
+  RCurl,
+  rvest,
+  stringr,
+  tidyr,
+  xml2
 RoxygenNote: 6.1.1
 Suggests: 
     testthat

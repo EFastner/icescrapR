@@ -1,10 +1,17 @@
 #'@importFrom magrittr %>%
+#'@importFrom foreach %do%
 NULL
 
 #'icescrapR: A package for helping to scrape, summarize, and visualize the NHL RTSS (play-by-play) data
 #'
+#'Big Thanks to Evolving Hockey (https://evolving-hockey.com/) for the scraping files listed below
+#'
 #'@section Scrape Functions:
-#'enhanced_PBP \cr
+#'scrape_pbp (created by Evolving Hockey) \cr
+#'scrape_schedule (created by Evolving Hockey) \cr
+#'scrape_player_info (created by Evolving Hockey) \cr
+#'expand_pbp (created by Evolving Hockey) \cr
+#'enhanced_pbp \cr
 #'
 #'@section Summarize Functions:
 #'get_game_results \cr
@@ -12,6 +19,7 @@ NULL
 #'
 #'@section Stats Functions:
 #'get_skater_stats \cr
+#'get_goalie_stats \cr
 #'
 #'@section Visualization Functions:
 #'viz_draw_rink \cr

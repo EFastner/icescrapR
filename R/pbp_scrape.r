@@ -16,7 +16,7 @@
 #'
 #'@author Eric Fastner (eric.fastner@@gmail.com)
 #'@export
-enhanced_PBP <- function(rawdata) {
+enhanced_pbp <- function(rawdata) {
 
   #Add Dummy Column for Home Team
   rawdata$is_home <-

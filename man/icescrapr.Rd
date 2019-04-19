@@ -6,13 +6,15 @@
 \alias{icescrapr-package}
 \title{icescrapR: A package for helping to scrape, summarize, and visualize the NHL RTSS (play-by-play) data}
 \description{
-A collection of functions that will help the user srape
-    play-by-play data from NHL.com as well as a collection of functions
-    for summarizing, analyzing, and visualizing the results
+Big Thanks to Evolving Hockey (https://evolving-hockey.com/) for the scraping files listed below
 }
 \section{Scrape Functions}{
 
-enhanced_PBP \cr
+scrape_pbp (created by Evolving Hockey) \cr
+scrape_schedule (created by Evolving Hockey) \cr
+scrape_player_info (created by Evolving Hockey) \cr
+expand_pbp (created by Evolving Hockey) \cr
+enhanced_pbp \cr
 }
 
 \section{Summarize Functions}{
@@ -24,6 +26,7 @@ get_team_results \cr
 \section{Stats Functions}{
 
 get_skater_stats \cr
+get_goalie_stats \cr
 }
 
 \section{Visualization Functions}{
